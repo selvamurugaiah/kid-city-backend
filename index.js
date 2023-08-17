@@ -16,10 +16,12 @@ const app = express();
 
 const server = http.createServer(app);
 const PORT = process.env.PORT;
+
 const io = new Server(server, {
   cors: "*",
   methods: ["GET", "POST", "PATCH", "DELETE"],
 });
+
 
 const URL = process.env.MONGO_URL;
 mongoose.connect(URL, { useNewUrlparser: true })
@@ -41,3 +43,4 @@ server.listen(PORT, () => {
 });
 
 app.set("socketio", io);
+
