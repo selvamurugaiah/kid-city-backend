@@ -4,6 +4,7 @@ import { User } from "../models/User.js";
 const router = express.Router();
 import { Cart } from "../models/Cart.js";
 
+//user routes
 router.post("/login", async (req, res) => {
   try {
     const { email, password } = req.body;

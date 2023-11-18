@@ -6,6 +6,7 @@ import mongoose from "mongoose";
 
 const router = express.Router();
 
+//order route
 router.post("/", async (req, res) => {
   try {
     const io = req.app.get("socketio");

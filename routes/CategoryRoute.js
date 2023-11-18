@@ -3,6 +3,7 @@ import { Product } from "../models/Product.js";
 
 const router = express.Router();
 
+//category route
 router.get("/:category", async (req, res) => {
   try {
     const { category } = req.params;

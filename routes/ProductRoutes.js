@@ -4,6 +4,7 @@ import { User } from "../models/User.js";
 
 const router = express.Router();
 
+//product routes
 router.get("/", async (req, res) => {
   try {
     const products = await Product.find();
